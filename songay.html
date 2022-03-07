@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Chọn tháng<br><br>
+    <select id="sl">
+        <option value="thang1" id="a">Tháng 1</option>
+        <option value="thang2" id="b">Tháng 2</option>
+        <option value="thang3" id="c">Tháng 3</option>
+        <option value="thang4" id="d">Tháng 4</option>
+        <option value="thang5" id="e">Tháng 5</option>
+        <option value="thang6" id="f">Tháng 6</option>
+        <option value="thang7" id="g">Tháng 7</option>
+        <option value="thang8" id="h">Tháng 8</option>
+        <option value="thang9" id="i">Tháng 9</option>
+        <option value="thang10" id="k">Tháng 10</option>
+        <option value="thang11" id="l">Tháng 11</option>
+        <option value="thang12" id="m">Tháng 12</option>
+    </select><br><br>
+    <button onclick="show()">Xem số ngày</button>
+    <h2 id="xem"></h2>
+    <script>
+        function show() {
+            let t1 = document.getElementById("a").value;
+            let t2 = document.getElementById("b").value;
+            let t3 = document.getElementById("c").value;
+            let t4 = document.getElementById("d").value;
+            let t5 = document.getElementById("e").value;
+            let t6 = document.getElementById("f").value;
+            let t7 = document.getElementById("g").value;
+            let t8 = document.getElementById("h").value;
+            let t9 = document.getElementById("i").value;
+            let t10 = document.getElementById("k").value;
+            let t11 = document.getElementById("l").value;
+            let t12 = document.getElementById("m").value;
+            let slt = document.getElementById("sl").value;
+            if (slt == t1 || slt == t3 || slt == t5 || slt == t7 || slt == t8 || slt == t10 || slt == t12) {
+                document.getElementById("xem").innerHTML = "Số ngày của tháng này là 31 ngày";
+            } else if (slt == t2) {
+                document.getElementById("xem").innerHTML = "Số ngày của tháng này là 28 hoặc 29 ngày";
+            }else {
+                document.getElementById("xem").innerHTML = "Số ngày của tháng này là 30 ngày";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
